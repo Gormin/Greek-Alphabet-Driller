@@ -73,7 +73,7 @@ func get_letter():
 		while file2Check.file_exists("res://Sprites/"+selector+Global.LETTERS[letter_ind]+str(num)+".png.import"):
 			possible_letters.append(num)
 			num+=1
-		sprite.texture=ResourceLoader.load("res://Sprites/"+selector+Global.LETTERS[letter_ind]+str(possible_letters[Global.random_gen.randi_range(0,possible_letters.size())])+".png")
+		sprite.texture=ResourceLoader.load("res://Sprites/"+selector+Global.LETTERS[letter_ind]+str(possible_letters[Global.random_gen.randi_range(0,possible_letters.size()-1)])+".png")
 	#set Global.answer
 	Global.answer = Global.LETTERS[letter_ind]
 
